@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Padauk&family=Source+Code+Pro:wght@500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Padauk&family=Source+Code+Pro:wght@500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    opacity: 0.98;
+    background-image: linear-gradient(to right,rgb(224, 113, 9), rgb(32, 13, 138));
+}
+
+.logo {
+    font-size: 1.8rem;
+}
+
+#menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+#menu li {
+    margin: 1rem 1.8rem;
+}
+
+#menu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#ham-menu {
+    display: none;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75vw;
+    margin: 6.25rem auto 6.25rem;
+}
+
+.contain {
+    padding: 0 1.6rem;
+}
+
+.hello h1 {
+    display: inline-block;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.profile-img img{
+    border-radius: 50%;
+}
+
+.bio p {
+    font-size: 1.25rem;
+}
+
+.line {
+    width: 80%;
+    margin: 12.5rem auto;
+    opacity: 0.5;
+    background-image: linear-gradient(to right, rgb(182, 144, 119), rgb(121, 94, 77), rgb(102, 33, 129));
+    border: none;
+    height: 2.5px;
+}
+
+.main {
+    margin-bottom: 1.9rem;
+}
+
+.main h2 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.main h2, .main p{
+    text-align: center;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+}
+
+.items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 4.5rem;
+}
+
+.item {
+    flex-basis: 25%;
+}
+
+.item .title {
+    margin-top: 1rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(left,rgb(224, 113, 9), rgb(32, 13, 138));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
+.item p {
+    text-align: left;
+    font-size: 1.12rem;
+    padding: 0;
+}
+
+.line-tablet {
+    display: none;
+}
+
+/* tablet */
+@media (max-width: 768px) { 
+    .header-top {
+        background-image: none;
+        justify-content: space-between;
+        padding: 0.6rem;
+    }
+
+    #ham-menu {
+        position: fixed;
+        top: 0.6rem;
+        right: 0.6rem;
+        z-index: 999;
+        display: block;
+        background-color: rgb(54, 54, 54);
+        width: 2.5rem;
+        height: 2.5rem;
+        border: none;
+        border-radius: 10%;
+        padding: 0.25rem;
+        cursor: pointer;
+    }
+
+    #menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 998;
+        padding-top: 4.37rem;
+        background-image: linear-gradient(rgb(32, 13, 138) ,rgb(250, 147, 50));
+        height: 0;
+    }
+
+    #nav.active #menu{
+        height: calc(100vh - 4.37rem);
+        display: block;
+    }
+
+    #menu a {
+        display: block;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .header-bottom {
+        width: 95vw;
+        margin-top: 9.4rem;
+        flex-wrap: wrap;
+    }
+
+    .profile-img, .contain {
+        flex-direction: column;
+    }
+
+    .line {
+        width: 100%;
+        margin: 6.25rem auto;
+        opacity: 0.7;
+        background-image: linear-gradient(to right, rgb(230, 109, 29), rgb(121, 94, 77), rgb(139, 103, 180));
+    }
+
+    .items {
+        justify-content: space-between;
+    }
+
+    .item {
+        flex-basis: 40%;
+        margin: 1.25rem 2rem;
+    }
+
+    .line-tablet {
+        display: block;
+        opacity: 0.5;
+        background-image: linear-gradient(to right, rgb(182, 144, 119), rgb(121, 94, 77), rgb(102, 33, 129));
+        border: none;
+        height: 2.5px;
+        margin-bottom: 1.9rem;
+    }
+}
+
+/* mobile */
+@media (max-width: 576px) {  
+    .hello {
+        text-align: center;
+        margin-top: 1.25rem;
+    }
+
+    .header-bottom {
+        margin-top: 4.7rem;
+    }
+
+    .item {
+        flex-basis: 70%;
+    }
+}
